@@ -1,0 +1,28 @@
+.page-section {
+  padding-top: $offset100;
+  padding-bottom: $offset100;
+  color: $light-gray;
+  text-align: center;
+
+  &:nth-child(odd) {
+    background-color: $lighter-background;
+  }
+
+  &:nth-child(even) {
+    background-color: $darker-background;
+  }
+
+  &__title {
+    font-family: $syncopate;
+    font-size: calculateRem(30px);
+    text-transform: uppercase;
+    margin-bottom: $offset30;
+  }
+
+  &__text {
+    margin: 0 auto;
+    width: 90%;
+    font-family: $average_sans;
+    font-size: calculateRem(15px);
+  }
+}

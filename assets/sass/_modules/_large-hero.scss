@@ -1,0 +1,53 @@
+.large-hero {
+  position: relative;
+
+  &__image {
+    display: block;
+    object-fit: fill;
+    z-index: -5;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 60px;
+  }
+
+  &__text-content {
+    margin-top: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $syncopate;
+    font-weight: 400;
+    letter-spacing: 2;
+    color: $white-gray;
+    text-transform: uppercase;
+    font-size: calculateRem(60px);
+    margin-top: $offset5;
+    margin-bottom: 0;
+    line-height: normal;
+  }
+
+  &__span {
+    font-family: $syncopate;
+    font-weight: normal;
+    font-size: calculateRem(20px);
+    color: $gold;
+  }
+
+  &__subtitle {
+    font-size: calculateRem(16px);
+    color: $light-gray;
+  }
+
+  &__buttons {
+    margin-top: $offset90;
+  }
+}

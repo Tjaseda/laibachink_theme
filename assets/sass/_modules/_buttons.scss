@@ -1,0 +1,59 @@
+.button {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: $syncopate;
+  font-size: calculateRem(15px);
+  border: none;
+  box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 8px;
+
+  &:active {
+  outline: none;
+  border: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &__primary {
+    background-color: $gold;
+    color: $white-gray;
+  }
+
+  &__secondary {
+    background-color: $dark-gray;
+    color: $white-gray;
+  }
+}
+
+.button {
+  &__controlers {
+    margin-bottom: 40px;
+  }
+
+  &__menu {
+    border: none;
+    background-color: inherit;
+    color: $light-gray;
+    font-family: $syncopate;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-size: calculateRem(14px);
+
+    &:active {
+    outline: none;
+    border: none;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+}
+
+.mixitup-control-active {
+  color: $gold;
+}

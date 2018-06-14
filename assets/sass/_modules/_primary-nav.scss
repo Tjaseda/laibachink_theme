@@ -1,0 +1,29 @@
+.primary-nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 5;
+}
+
+.menu-menu-1-container {
+  width: 90%;
+  margin: 0 auto;
+  ul {
+    width: 100%;
+    display: table;
+    li {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      a {
+        color: $light-gray;
+        font-family: $syncopate;
+        font-weight: normal;
+        font-size: calculateRem(14px);
+        text-transform: uppercase;
+        line-height: 3.2;
+      }
+    }
+  }
+}

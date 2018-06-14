@@ -115,6 +115,11 @@ add_action( 'widgets_init', 'laibachink_widgets_init' );
  */
 function laibachink_scripts() {
 	wp_enqueue_style( 'laibachink-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'laibachink-syncopate-font', 'https://fonts.googleapis.com/css?family=Syncopate:400,700');
+	wp_enqueue_style( 'laibachink-average_sans-font', 'https://fonts.googleapis.com/css?family=Average+Sans');
+
+	wp_enqueue_script( 'mixitup_library', get_bloginfo('template_directory') . '/assets/js/dist/mixitup.min.js', '', '', true);
+	wp_enqueue_script( 'mixitup_animation', get_bloginfo('template_directory') . '/assets/js/dist/app.min.js', '', '', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -131,3 +136,10 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+* Registered image sizes.
+*/
+
+/* croped image for portfolio grid */
+add_image_size( 'portfolio_grid', 240, 300, true );

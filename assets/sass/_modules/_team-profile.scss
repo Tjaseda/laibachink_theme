@@ -1,0 +1,57 @@
+.team-profile {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 90px;
+
+  &__wrap {
+    width: (100% / 3) - 1;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__image {
+    width: 65%;
+    border-radius: 50%;
+    margin-bottom: $offset20;
+
+    &--top {
+
+    }
+
+    &--bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $syncopate;
+    font-size: calculateRem(15px);
+    line-height: 1.1;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: $light-gray;
+  }
+
+  &__position {
+    text-transform: uppercase;
+    font-size: calculateRem(13px);
+    color: $gold;
+    letter-spacing: 1.2px;
+    margin-bottom: $offset15;
+  }
+
+  &__social {
+    margin: 3px;
+  }
+}

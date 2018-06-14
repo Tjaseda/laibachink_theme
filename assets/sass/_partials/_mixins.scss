@@ -1,0 +1,63 @@
+$cap: 1920px;
+$ml: 970px;
+$m: 850px;
+$s: 740px;
+$xs: 500px;
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: $cap) { @content; }
+  }
+  @else if $point == mediumLarge {
+    @media (max-width: $ml) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: $m) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: $s) { @content; }
+  }
+  @else if $point == extrasmall {
+    @media (max-width: $xs) { @content; }
+  }
+  @else if $point == mega {
+    @media screen and (min-width: $cap) { @content; }
+  }
+}
+
+@mixin ipadlandscape {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+  { @content; }
+}
+
+@mixin ipadportrait {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  { @content; }
+}
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  line-height: $size + 4px;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}

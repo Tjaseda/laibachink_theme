@@ -1,11 +1,14 @@
 .button {
+  @include breakpoint(extrasmall) {
+    width: 105px;
+    font-size: calculateRem(14px);
+  }
   width: 150px;
   height: 40px;
   border-radius: 5px;
   font-family: $syncopate;
   font-size: calculateRem(15px);
   border: none;
-  box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 8px;
 
   &:active {
@@ -20,17 +23,29 @@
   &__primary {
     background-color: $gold;
     color: $white-gray;
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
   }
 
   &__secondary {
     background-color: $dark-gray;
     color: $white-gray;
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &__load-more {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    color: $light-gray;
+    font-weight: bold;
+
+    &:hover {
+    }
   }
 }
 
 .button {
   &__controlers {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   &__menu {
@@ -40,7 +55,16 @@
     font-family: $syncopate;
     text-transform: uppercase;
     padding: 0 20px;
-    font-size: calculateRem(14px);
+    font-size: calculateRem(16px);
+    @include breakpoint(small) {
+      font-size: calculateRem(15px);
+    }
+
+    &--info {
+      @include breakpoint(small) {
+        padding: 0 5px;
+      }
+    }
 
     &:active {
     outline: none;
@@ -54,6 +78,6 @@
 
 }
 
-.mixitup-control-active {
+.mixitup-control-active, .active {
   color: $gold;
 }

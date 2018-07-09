@@ -1,0 +1,44 @@
+.product {
+  &__line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba($light-gray, 0), rgba($light-gray, 0.1), rgba($light-gray, 0));
+  }
+
+  &__partners {
+    background: linear-gradient(to right, rgba($dark-gray, 0), rgba($dark-gray, 1), rgba($dark-gray, 0));
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  &__partner {
+    @include breakpoint(small) {
+      width: 100%;
+      padding-bottom: 5px;
+    }
+    width: calc(100%/4);
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__partner--item {
+    @include breakpoint(medium) {
+      max-width: 70%;
+    }
+    @include breakpoint(small) {
+      max-width: 30%;
+    }
+    @include breakpoint(extrasmall) {
+      max-width: 45%;
+    }
+    max-width: 60%;
+    max-height: 100px;
+    padding-top: 7px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

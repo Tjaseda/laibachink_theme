@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
+    webpack = require('webpack'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     watch = require('gulp-watch'),
@@ -56,14 +57,14 @@ gulp.task('images', function() {
       .pipe(gulp.dest(imgDest));
 });
 
-var jsInput = { js: 'assets/js/dev/**/*.js' }
-var jsOutput = 'assets/js/dist/';
-
-gulp.task('js', function() {
-  return gulp.src(jsInput.js)
-      .pipe(concat('app.min.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('./assets/js/dist/'))
+gulp.task('js', function(callback) {
+  webpack(require('./webpack.config.js'), function(err, stats) {
+    if(err) {
+      console.log(err.toString());
+    }
+    console.log(stats.toString());
+    callback();
+  });
 });
 
 gulp.task('default', ['sass', 'browser-sync', 'watch', 'images', 'js']);

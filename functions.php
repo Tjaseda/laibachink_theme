@@ -119,7 +119,7 @@ function laibachink_scripts() {
 	wp_enqueue_style( 'laibachink-average_sans-font', 'https://fonts.googleapis.com/css?family=Average+Sans');
 
 	wp_enqueue_script( 'mixitup_library', get_bloginfo('template_directory') . '/assets/js/dist/mixitup.min.js', '', '', true);
-	wp_enqueue_script( 'mixitup_animation', get_bloginfo('template_directory') . '/assets/js/dist/app.min.js', '', '', true);
+	wp_enqueue_script( 'main_js', get_bloginfo('template_directory') . '/assets/js/dist/app.min.js', array( 'jquery' ), '', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -141,5 +141,25 @@ require get_template_directory() . '/inc/template-functions.php';
 * Registered image sizes.
 */
 
-/* croped image for portfolio grid */
-add_image_size( 'portfolio_grid', 240, 300, true );
+/* adding croped image for portfolio grid and srcset alternatives*/
+add_image_size( 'portfolio_grid', 260, 325, true );
+add_image_size( 'portfolio_grid@2x', 520, 650, true );
+add_image_size( 'portfolio_grid@3x', 780, 975, true );
+
+add_image_size( 'portfolio_view', 400, 400, false );
+add_image_size( 'portfolio_view@2', 800, 800, false );
+add_image_size( 'portfolio_view@3', 1000, 1000, false );
+
+
+/* Setting sizes attribute for portfolio grid */
+function laibachink_portfolio_sizes_attr( $attr, $attachment, $size ) {
+	if ( $size === 'portfolio_grid' ) {
+		/* on max width 500px one pic takes up 50% of view width, on max width 740px one pic takes 33% of vw,... */
+		$attr['sizes'] = '(max-width: 500px) 50vw, (max-width: 740px) 33vw, (max-width: 970px) 25vw, (max-width: 1550px) 16vw, (min-width: 1550px) 12vw, 260px';
+	}
+	else if ( $size === 'portfolio_view') {
+		$attr['sizes'] = '(max-width: 500px) 80vw, (max-width: 740px) 70vw, (max-width: 970px) 60vw, (min-width: 970px) 25vw, 400px';
+	}
+	return$attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'laibachink_portfolio_sizes_attr', 10 , 3 );

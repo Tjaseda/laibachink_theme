@@ -1,0 +1,11 @@
+.footer {
+  background-color: $footer-gray;
+  text-align: center;
+
+  &__copyright {
+    font-family: $syncopate;
+    color: rgba($light-gray, 0.3);
+    margin: 30px 0;
+    font-size: calculateRem(15px);
+  }
+}

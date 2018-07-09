@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {
@@ -12,8 +11,21 @@ body {
 
 a {
   text-decoration: none;
+  color: $light-gray;
 }
 
 ul {
   list-style-type: none;
+}
+
+p {
+  @include breakpoint(large) {
+    font-size: calculateRem(19px);
+  }
+  @include breakpoint(desktopLarge) {
+    font-size: calculateRem(17px);
+  }
+
+  margin: 0 auto;
+  color: rgba($light-gray, 0.6);
 }

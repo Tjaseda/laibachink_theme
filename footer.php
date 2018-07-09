@@ -13,10 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<!-- <p> Copyright © Laibachink Tattoo Studio | 2018 </p> -->
-		</div><!-- .site-info -->
+	<footer id="colophon" class="footer">
+		<div class="wrapper">
+			<p class="footer__copyright"> Copyright &#169; Laibachink Tattoo Studio | 2018 </p>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

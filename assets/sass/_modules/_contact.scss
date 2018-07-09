@@ -1,0 +1,47 @@
+.contact {
+  &__item-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100%/4);
+    @include breakpoint(small){
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    &:last-of-type {
+      @include breakpoint(small){
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__item {
+    margin-top: 20px;
+  }
+
+  &__item--text {
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+  &__icon {
+    @include breakpoint(small){
+      margin: 0 5px;
+    }
+    margin: 16px 5px 0 5px;
+  }
+
+  &__rights {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba($lighter-background, 0), rgba($lighter-background, 1), rgba($lighter-background, 0));
+
+    &--statement {
+      color: rgba($light-gray, 0.5);
+      font-size: calculateRem(16px);
+      font-style: italic;
+    }
+  }
+
+}

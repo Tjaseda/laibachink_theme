@@ -1,5 +1,12 @@
 .large-hero {
   position: relative;
+  height: 100vh;
+
+  @include retinaBackground('./assets/images/hero-image', 'jpg');
+
+  background-position: center;
+  background-size: cover;
+  // background-attachment: fixed;
 
   &__image {
     display: block;
@@ -10,14 +17,14 @@
   &__logo {
     display: block;
     margin: 0 auto;
-    max-width: 60px;
+    max-width: 50px;
   }
 
   &__text-content {
-    margin-top: 35px;
+    margin-top: $offset10;
     position: absolute;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     left: 0;
     width: 100%;
     text-align: center;
@@ -29,10 +36,23 @@
     letter-spacing: 2;
     color: $white-gray;
     text-transform: uppercase;
-    font-size: calculateRem(60px);
     margin-top: $offset5;
     margin-bottom: 0;
     line-height: normal;
+
+    @include breakpoint(large) {
+      font-size: calculateRem(65px);
+    }
+    @include breakpoint(desktopLarge) {
+      font-size: calculateRem(55px);
+    }
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(45px);
+    }
+    @include breakpoint(small) {
+      font-size: calculateRem(35px);
+    }
+
   }
 
   &__span {
@@ -43,11 +63,14 @@
   }
 
   &__subtitle {
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(13px);
+    }
     font-size: calculateRem(16px);
     color: $light-gray;
   }
 
   &__buttons {
-    margin-top: $offset90;
+    margin-top: $offset50;
   }
 }

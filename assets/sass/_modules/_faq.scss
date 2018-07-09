@@ -1,0 +1,19 @@
+.faq {
+  &__item-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.visible {
+  display: block;
+}

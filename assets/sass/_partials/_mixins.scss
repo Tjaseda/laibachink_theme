@@ -1,4 +1,5 @@
 $cap: 1920px;
+$des: 1550px;
 $ml: 970px;
 $m: 850px;
 $s: 740px;
@@ -6,7 +7,13 @@ $xs: 500px;
 
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (max-width: $cap) { @content; }
+    @media (min-width: $des) { @content; }
+  }
+  @else if $point == desktopLarge {
+    @media (max-width: $des) { @content; }
+  }
+  @else if $point == desktopLgMF {
+    @media (min-width: $ml) { @content; }
   }
   @else if $point == mediumLarge {
     @media (max-width: $ml) { @content; }
@@ -20,19 +27,28 @@ $xs: 500px;
   @else if $point == extrasmall {
     @media (max-width: $xs) { @content; }
   }
-  @else if $point == mega {
-    @media screen and (min-width: $cap) { @content; }
+}
+
+
+@mixin retinaBackground($file, $type) {
+  @media (min-width: $des) {
+    background-image: url($file + '-large.' + $type);
+    @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+      background-image: url($file + '-large-hi-dpi.' + $type);
+    }
   }
-}
-
-@mixin ipadlandscape {
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-  { @content; }
-}
-
-@mixin ipadportrait {
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-  { @content; }
+  @media (max-width: $des) {
+    background-image: url($file + '-desktop.' + $type);
+    @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+      background-image: url($file + '-desktop-hi-dpi.' + $type);
+    }
+  }
+  @media (max-width: $s) {
+    background-image: url($file + '-middle.' + $type);
+    @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+      background-image: url($file + '-middle-hi-dpi.' + $type);
+    }
+  }
 }
 
 @mixin transition($args) {

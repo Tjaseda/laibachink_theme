@@ -1,4 +1,8 @@
 .page-section {
+  @include breakpoint(mediumLarge) {
+    padding-top: $offset80;
+    padding-bottom: $offset80;
+  }
   padding-top: $offset100;
   padding-bottom: $offset100;
   color: $light-gray;
@@ -12,6 +16,10 @@
     background-color: $darker-background;
   }
 
+  &:last-child {
+    padding-bottom: $offset50;
+  }
+
   &__title {
     font-family: $syncopate;
     font-size: calculateRem(30px);
@@ -19,10 +27,13 @@
     margin-bottom: $offset30;
   }
 
-  &__text {
-    margin: 0 auto;
-    width: 90%;
-    font-family: $average_sans;
-    font-size: calculateRem(15px);
+  &__subtitle {
+    font-family: $syncopate;
+    font-size: calculateRem(16px);
+    text-transform: uppercase;
+    color: $gold;
+    font-weight: normal;
   }
+
+
 }

@@ -1,18 +1,47 @@
 .team-profile {
-  width: 60%;
+  @include breakpoint(large) {
+    width: 60%;
+  }
+  @include breakpoint(desktopLarge) {
+    width: 80%;
+  }
+  @include breakpoint(mediumLarge) {
+    width: 100%;
+    padding-top: 65px;
+  }
+  padding-top: 100px;
   margin: 0 auto;
-  padding-top: 90px;
 
   &__wrap {
+    @include breakpoint(mediumLarge) {
+      width: 100%;
+      margin-bottom: $offset70;
+    }
     width: (100% / 3) - 1;
     display: inline-block;
     position: relative;
   }
 
   &__image {
-    width: 65%;
+    @include breakpoint(large) {
+      width: 75%;
+      margin-bottom: $offset20;
+    }
+    @include breakpoint(desktopLarge) {
+      width: 80%;
+      margin-bottom: $offset20;
+    }
+    @include breakpoint(mediumLarge) {
+      width: 40%;
+    }
+    @include breakpoint(small) {
+      width: 50%;
+    }
+    @include breakpoint(extrasmall) {
+      width: 60%;
+    }
     border-radius: 50%;
-    margin-bottom: $offset20;
+
 
     &--top {
 
@@ -26,7 +55,7 @@
       margin: 0 auto;
       z-index: 3;
       opacity: 0;
-      transition: opacity 0.3s ease-in;
+      transition: opacity 0.2s ease-in-out;
 
       &:hover {
         opacity: 1;

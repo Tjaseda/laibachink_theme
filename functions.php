@@ -163,3 +163,36 @@ function laibachink_portfolio_sizes_attr( $attr, $attachment, $size ) {
 	return$attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'laibachink_portfolio_sizes_attr', 10 , 3 );
+
+/**
+ * Add custom attribute and value to a nav menu item's anchor based on CSS class.
+ */
+
+add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+  if ( 'id-about-us-link' === $item->classes[0] ) {
+      $atts['id'] = 'about-us-link';
+  }
+	else if ( 'id-gallery-link' === $item->classes[0] ) {
+      $atts['id'] = 'gallery-link';
+	}
+	else if ( 'id-info-link' === $item->classes[0] ) {
+      $atts['id'] = 'info-link';
+	}
+	else if ( 'id-products-link' === $item->classes[0] ) {
+      $atts['id'] = 'products-link';
+	}
+	else if ( 'id-contact-link' === $item->classes[0] ) {
+      $atts['id'] = 'contact-link';
+	}
+
+	return $atts; }, 10, 3 );
+
+
+	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+	  if ( 'nav-link' === $item->classes[1] ) {
+
+	      $atts['class'] = 'nav-link';
+				$atts['data-scroll'] = $atts['href'];
+	  }
+
+	  return $atts; }, 10, 3 );

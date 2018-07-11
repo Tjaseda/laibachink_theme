@@ -6,7 +6,7 @@
  *
  * @package laibachink
  */
-
+ $products_id = get_field('products_id', 5);
  $products_title = get_field('products_title', 5);
  $about_products = get_field('about_products', 5);
 
@@ -19,7 +19,7 @@
  $logo_3_link = get_field('logo_3_link', 5);
 ?>
 
-<div id="izdelki" class="page-section">
+<div id="<?php echo $products_id; ?>" class="page-section" data-matching-link="#products-link">
 	<h2 class="page-section__title"><?php echo $products_title; ?></h2>
 
 	<div class="wrapper">

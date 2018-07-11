@@ -7,7 +7,7 @@
 
 
   &--is-expanded {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9) !important;
   }
 }
 
@@ -35,6 +35,10 @@
         &:hover {
           color: $gold;
         }
+
+        &.is-current-link {
+          color: $gold;
+        }
       }
     }
   }
@@ -44,6 +48,7 @@
 
   &--is-visible {
     display: block;
+    margin-bottom: 10px;
   }
 }
 

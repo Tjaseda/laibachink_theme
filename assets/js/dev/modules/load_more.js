@@ -8,6 +8,9 @@ class LoadMoreButton {
     this.menuButtons = document.querySelectorAll('.portfolio__selector'); // returns an array
     this.loadMoreButton = document.getElementsByClassName('button__load-more')[0];
     this.loadMoreButtonText = document.getElementsByClassName('button__load-more')[0].textContent;
+    this.showMoreButtonText = document.getElementsByClassName('button__load-more')[0].textContent;
+    this.showLessButtonText = document.getElementsByClassName('button__load-more')[0].getAttribute('data-less');
+    this.showPortfolioContainer = document.getElementsByClassName('portfolio')[0];
     this.innerWidth;
     this.events();
 
@@ -140,7 +143,7 @@ class LoadMoreButton {
 
     //8 images in a row
     if (width > 1550) {
-      if (this.loadMoreButtonText === "Vec Slik") {
+      if (this.loadMoreButtonText === this.showMoreButtonText) {
         for(var i=notDisplayed.length - 1; i >= 0; i -= 1) {
           if(i < 8) {
             displayed.push(notDisplayed[i]);
@@ -156,7 +159,7 @@ class LoadMoreButton {
     }
     //6 images in a row
     else if (width < 1550 && width > 970) {
-      if (this.loadMoreButtonText === "Vec Slik") {
+      if (this.loadMoreButtonText === this.showMoreButtonText) {
         for(var i=notDisplayed.length - 1; i >= 0; i -= 1) {
           if(i < 6) {
             displayed.push(notDisplayed[i]);
@@ -172,7 +175,7 @@ class LoadMoreButton {
     }
     //4 images in a row
     else if (width < 970 && width > 740) {
-      if (this.loadMoreButtonText === "Vec Slik") {
+      if (this.loadMoreButtonText === this.showMoreButtonText) {
         for(var i=notDisplayed.length - 1; i >= 0; i -= 1) {
           if(i < 8) {
             displayed.push(notDisplayed[i]);
@@ -188,7 +191,7 @@ class LoadMoreButton {
     }
     //3 images in a row
     else if (width < 740 && width > 500) {
-      if (this.loadMoreButtonText === "Vec Slik") {
+      if (this.loadMoreButtonText === this.showMoreButtonText) {
         for(var i=notDisplayed.length - 1; i >= 0; i -= 1) {
           if(i < 6) {
             displayed.push(notDisplayed[i]);
@@ -204,7 +207,7 @@ class LoadMoreButton {
     }
     //2 images in a row
     else if (width < 500) {
-      if (this.loadMoreButtonText === "Vec Slik") {
+      if (this.loadMoreButtonText === this.showMoreButtonText) {
         for(var i=notDisplayed.length - 1; i >= 0; i -= 1) {
           if(i < 6) {
             displayed.push(notDisplayed[i]);
@@ -223,10 +226,10 @@ class LoadMoreButton {
     this.notDisplayedImages = notDisplayed;
 
     if(this.notDisplayedImages.length === 0) {
-      this.loadMoreButton.textContent = "Manj Slik";
+      this.loadMoreButton.textContent = this.showLessButtonText;
     }
     else {
-      this.loadMoreButton.textContent = "Vec Slik";
+      this.loadMoreButton.textContent = this.showMoreButtonText;
     }
 
     this.loadMoreButtonText = this.loadMoreButton.textContent;

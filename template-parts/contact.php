@@ -6,7 +6,7 @@
  *
  * @package laibachink
  */
-
+ $contact_id = get_field('contact_id', 5);
  $contact_title = get_field('contact_title', 5);
  $telephone_heading = get_field('telephone_heading', 5);
  $telephone_number = get_field('telephone_number', 5);
@@ -20,7 +20,7 @@
  $authors_rights = get_field('authors_rights', 5);
 ?>
 
-<div id="kontakt" class="page-section">
+<div id="<?php echo $contact_id; ?>" class="page-section" data-matching-link="#contact-link">
 	<h2 class="page-section__title"><?php echo $contact_title; ?></h2>
 
 	<div class="wrapper">

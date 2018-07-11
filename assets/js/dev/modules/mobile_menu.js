@@ -1,20 +1,40 @@
+import $ from 'jquery';
+
 class MobileMenu {
   constructor() {
-    this.burgerIcon = document.getElementsByClassName('toggle-nav')[0];
-    this.menu = document.getElementsByClassName('menu-menu-1-container')[0];
-    this.primaryNav = document.getElementsByClassName('primary-nav')[0];
+    this.burgerIcon = $('.toggle-nav');
+    this.menu = $('.menu-menu-1-container');
+    this.menuItem = $('.menu-item.a');
+    this.window = $(window);
+    this.primaryNav = $('.primary-nav');
+    this.width;
     this.events();
+    this.getWidth();
   }
 
   events() {
-    this.burgerIcon.addEventListener('click', this.toggleMenu.bind(this));
+    this.burgerIcon.click(this.toggleMenu.bind(this));
+    this.window.resize(this.getWidth.bind(this));
+    this.menu.click(this.closeMenu.bind(this));
+  }
+
+  closeMenu() {
+    if (this.width < 970) {
+      this.menu.toggleClass('menu-menu-1-container--is-visible');
+      this.burgerIcon.toggleClass('toggle-nav--close-x');
+      this.primaryNav.toggleClass('primary-nav--is-expanded');
+    }
+  }
+
+  getWidth() {
+    this.width = this.window.width();
   }
 
   toggleMenu(e) {
     e.preventDefault();
-    this.menu.classList.toggle('menu-menu-1-container--is-visible');
-    this.burgerIcon.classList.toggle('toggle-nav--close-x');
-    this.primaryNav.classList.toggle('primary-nav--is-expanded');
+    this.menu.toggleClass('menu-menu-1-container--is-visible');
+    this.burgerIcon.toggleClass('toggle-nav--close-x');
+    this.primaryNav.toggleClass('primary-nav--is-expanded');
   }
 }
 

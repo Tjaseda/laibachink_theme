@@ -22,26 +22,3 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
-	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="primary-nav">
-			<div class="container">
-					<a class="toggle-nav" href="#">
-						<div class="toggle-nav__line"></div>
-					</a>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
-
-			</div>
-		</nav><!-- #site-navigation -->
-
-
-
-
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

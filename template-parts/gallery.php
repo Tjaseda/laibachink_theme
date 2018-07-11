@@ -10,10 +10,13 @@
 ?>
 
 <?php
+$gallery_id = get_field('gallery_id', 5);
 $gallery_title = get_field('gallery_title', 5);
+$show_more_text = get_field('show_more_text', 5);
+$show_less_text = get_field('show_less_text', 5);
 ?>
 
-<div id="galerija" class="page-section">
+<div id="<?php echo $gallery_id; ?>" class="page-section" data-matching-link="#gallery-link">
   <h2 class="page-section__title"><?php echo $gallery_title; ?></h2>
 
   <div class="portfolio">
@@ -67,6 +70,6 @@ $gallery_title = get_field('gallery_title', 5);
       </div>
     </div>
 
-    <button type="button" class="button button__load-more"><?php esc_html_e( 'Vec Slik', 'laibachink' ); ?></button>
+    <button type="button" class="button button__load-more" data-less="<?php echo $show_less_text; ?>"><?php echo $show_more_text; ?></button>
   </div>
 </div>

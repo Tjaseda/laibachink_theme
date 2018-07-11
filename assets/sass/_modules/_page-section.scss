@@ -1,7 +1,7 @@
 .page-section {
   @include breakpoint(mediumLarge) {
-    padding-top: $offset80;
-    padding-bottom: $offset80;
+    padding-top: $offset100;
+    padding-bottom: $offset100;
   }
   padding-top: $offset100;
   padding-bottom: $offset100;
@@ -17,14 +17,31 @@
   }
 
   &:last-child {
-    padding-bottom: $offset50;
+    padding-bottom: $offset70;
   }
 
   &__title {
+    @include breakpoint(desktopLarge) {
+      font-size: calculateRem(35px);
+    }
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(30px);
+    }
     font-family: $syncopate;
-    font-size: calculateRem(30px);
+    font-size: calculateRem(40px);
     text-transform: uppercase;
-    margin-bottom: $offset30;
+    margin-bottom: $offset20;
+
+    &--not-found {
+      @include breakpoint(desktopLarge) {
+        font-size: calculateRem(25px);
+      }
+      @include breakpoint(mediumLarge) {
+        font-size: calculateRem(20px);
+      }
+
+      font-size: calculateRem(30px);
+    }
   }
 
   &__subtitle {
@@ -33,6 +50,16 @@
     text-transform: uppercase;
     color: $gold;
     font-weight: normal;
+  }
+
+  &__not-found {
+    height: 100vh;
+
+    @include retinaBackground('./assets/images/hero-image', 'jpg');
+
+    background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
   }
 
 

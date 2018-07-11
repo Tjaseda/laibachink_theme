@@ -31,10 +31,10 @@
 
         <div class="large-hero__buttons">
           <?php if($landing_page_primary_button_text): ?>
-          <a href="<?php echo $landing_page_primary_button_link; ?>"><button class="button button__primary"><?php echo $landing_page_primary_button_text; ?></button></a>
+          <a href="<?php echo $landing_page_primary_button_link; ?>" data-scroll="<?php echo $landing_page_primary_button_link; ?>"><button class="button button__primary"><?php echo $landing_page_primary_button_text; ?></button></a>
         <?php endif; ?>
         <?php if($landing_page_secondary_button_text): ?>
-          <a href="<?php echo $landing_page_secondary_button_link; ?>"><button class="button button__secondary"><?php echo $landing_page_secondary_button_text; ?></button></a>
+          <a href="<?php echo $landing_page_secondary_button_link; ?>" data-scroll="<?php echo $landing_page_secondary_button_link; ?>"><button class="button button__secondary"><?php echo $landing_page_secondary_button_text; ?></button></a>
           <?php endif; ?>
       </div>
     </div>

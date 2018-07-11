@@ -8,7 +8,7 @@
   &__partners {
     background: linear-gradient(to right, rgba($dark-gray, 0), rgba($dark-gray, 1), rgba($dark-gray, 0));
     width: 100%;
-    margin-top: 70px;
+    margin-top: 80px;
   }
 
   &__partner {
@@ -31,7 +31,7 @@
     @include breakpoint(extrasmall) {
       max-width: 45%;
     }
-    max-width: 60%;
+    max-width: 70%;
     max-height: 100px;
     padding-top: 7px;
     opacity: 0.5;

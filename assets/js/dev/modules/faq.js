@@ -29,7 +29,6 @@ class Faq {
       var height = element.offsetHeight;
 
       this.wrap.style.height = height + 'px';
-      console.log(this.wrap.style.height);
     }
   }
 

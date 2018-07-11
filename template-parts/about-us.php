@@ -10,11 +10,12 @@
 ?>
 
 <?php
+$about_us_id = get_field('about_us_id', 5);
 $about_us_title = get_field('about_us_title', 5);
 $about_us_text = get_field('about_us_text', 5);
 ?>
 
-<div id="o-nas" class="page-section">
+<div id="<?php echo $about_us_id; ?>" class="page-section" data-matching-link="#about-us-link">
   <div class="wrapper">
     <h2 class="page-section__title"><?php echo $about_us_title; ?></h2>
     <?php echo $about_us_text; ?>

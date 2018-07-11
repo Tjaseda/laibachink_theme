@@ -10,10 +10,11 @@
 ?>
 
 <?php
+$info_id = get_field('info_id', 5);
 $info_title = get_field('info_title', 5);
 ?>
 
-<div id="info" class="page-section">
+<div id="<?php echo $info_id; ?>" class="page-section" data-matching-link="#info-link">
 	<h2 class="page-section__title"><?php echo $info_title; ?></h2>
 
 	<?php

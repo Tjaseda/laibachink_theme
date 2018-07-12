@@ -16,7 +16,7 @@
 				<h1 class="large-hero__title">Oops!</h1>
 				<h2 class="large-hero__span">It seems like you are lost</h2>
 				<div class="large-hero__buttons">
-					<a href="http://localhost:3000/wordpress"><button class="button button__primary">Find Us Here</button></a>
+					<a href="http://laibachink.si"><button class="button button__primary">Find Us Here</button></a>
 				</div>
 			</div>
 		</div>

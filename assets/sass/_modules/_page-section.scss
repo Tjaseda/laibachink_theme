@@ -3,8 +3,8 @@
     padding-top: $offset100;
     padding-bottom: $offset100;
   }
-  padding-top: $offset100;
-  padding-bottom: $offset100;
+  padding-top: 130px;
+  padding-bottom: 130px;
   color: $light-gray;
   text-align: center;
 
@@ -30,7 +30,7 @@
     font-family: $syncopate;
     font-size: calculateRem(40px);
     text-transform: uppercase;
-    margin-bottom: $offset20;
+    margin-bottom: $offset30;
 
     &--not-found {
       @include breakpoint(desktopLarge) {

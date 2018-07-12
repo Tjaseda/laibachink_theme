@@ -209,7 +209,33 @@ function create_custom_post_types() {
 			'public' => true,
 			'exclude_from_search' => false,
 			'publicly_queryable' => false,
-			'supports' => array( 'title', 'editor', 'thumbnail', 'custom', 'custom-fields' )
+			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+    )
+  );
+
+	register_post_type( 'portfolio',
+    array(
+      'labels' => array(
+        'name' => __( 'Portfolio' ),
+        'singular_name' => __( 'Portfolio' )
+      ),
+			'public' => true,
+			'exclude_from_search' => false,
+			'publicly_queryable' => false,
+			'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+  );
+
+	register_post_type( 'faq',
+    array(
+      'labels' => array(
+        'name' => __( 'FAQ' ),
+        'singular_name' => __( 'FAQ' )
+      ),
+			'public' => true,
+			'exclude_from_search' => false,
+			'publicly_queryable' => false,
+			'supports' => array( 'title', 'editor' )
     )
   );
 }

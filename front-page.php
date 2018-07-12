@@ -50,7 +50,6 @@
 
 get_header();
 ?>
-
 		<nav id="site-navigation" class="primary-nav">
 			<div class="container">
 					<a class="toggle-nav" href="#">
@@ -60,6 +59,13 @@ get_header();
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+				) );
+				?>
+
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'toolbar',
 				) );
 				?>
 			</div>

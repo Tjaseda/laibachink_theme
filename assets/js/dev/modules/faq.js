@@ -59,7 +59,7 @@ class Faq {
     this.displayItem(this.selector);
   }
 
-  reactivateButton() {
+  reactivateButton(event) {
     this.selector = event.target;
 
     for (var i=0; i<this.selectors.length; i++) {

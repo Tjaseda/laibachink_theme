@@ -168,7 +168,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'laibachink_portfolio_sizes_at
  * Add custom attribute and value to a nav menu item's anchor based on CSS class.
  */
 
-add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+ add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
   if ( 'id-about-us-link' === $item->classes[0] ) {
       $atts['id'] = 'about-us-link';
   }
@@ -185,14 +185,31 @@ add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
       $atts['id'] = 'contact-link';
 	}
 
-	return $atts; }, 10, 3 );
+return $atts; }, 10, 3 );
 
 
-	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
 	  if ( 'nav-link' === $item->classes[1] ) {
 
 	      $atts['class'] = 'nav-link';
 				$atts['data-scroll'] = $atts['href'];
 	  }
 
-	  return $atts; }, 10, 3 );
+return $atts; }, 10, 3 );
+
+add_action( 'init', 'create_custom_post_types' );
+function create_custom_post_types() {
+
+  register_post_type( 'team',
+    array(
+      'labels' => array(
+        'name' => __( 'Team' ),
+        'singular_name' => __( 'Team Member' )
+      ),
+			'public' => true,
+			'exclude_from_search' => false,
+			'publicly_queryable' => false,
+			'supports' => array( 'title', 'editor', 'thumbnail', 'custom', 'custom-fields' )
+    )
+  );
+}

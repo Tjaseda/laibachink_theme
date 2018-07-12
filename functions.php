@@ -222,7 +222,8 @@ function create_custom_post_types() {
 			'public' => true,
 			'exclude_from_search' => false,
 			'publicly_queryable' => false,
-			'supports' => array( 'title', 'editor', 'thumbnail' )
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies' => array( 'category' )
     )
   );
 
@@ -235,7 +236,7 @@ function create_custom_post_types() {
 			'public' => true,
 			'exclude_from_search' => false,
 			'publicly_queryable' => false,
-			'supports' => array( 'title', 'editor' )
+			'supports' => array( 'title', 'editor' ),
     )
   );
 }

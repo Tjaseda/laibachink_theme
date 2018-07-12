@@ -12,7 +12,7 @@ class Faq {
       var item;
 
       for (var i=0; i<this.items.length; i++) {
-        itemSelector = this.items[i].getAttribute('data-selected');
+        itemSelector = this.items[i].getAttribute('data-selector');
         if(itemSelector === selector) {
           item = this.items[i];
           this.items[i].classList.add('visible');
@@ -42,7 +42,7 @@ class Faq {
 
   activateButton() {
     for (var i=0; i<this.selectors.length; i++) {
-      if(this.selectors[i].getAttribute('data-selector') === "Tveganja") {
+      if(i === 0) {
         this.selector = this.selectors[i];
       }
       else {

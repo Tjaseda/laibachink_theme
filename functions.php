@@ -46,6 +46,9 @@ if ( ! function_exists( 'laibachink_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'laibachink' ),
 		) );
+		register_nav_menus( array(
+			'menu-2' => esc_html__( 'Toolbar', 'laibachink' ),
+		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

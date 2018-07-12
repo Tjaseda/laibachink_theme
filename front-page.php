@@ -62,7 +62,6 @@ get_header();
 					'menu_id'        => 'primary-menu',
 				) );
 				?>
-
 			</div>
 		</nav><!-- #site-navigation -->
 

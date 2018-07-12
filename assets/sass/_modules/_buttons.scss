@@ -45,7 +45,10 @@
 
 .button {
   &__controlers {
-    margin-bottom: 50px;
+    @include breakpoint(mediumLarge) {
+      margin-bottom: 50px;
+    }
+    margin-bottom: 60px;
   }
 
   &__menu {

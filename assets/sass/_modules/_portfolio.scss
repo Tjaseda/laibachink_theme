@@ -6,10 +6,11 @@
   &__container {
     @include breakpoint(mediumLarge) {
      padding: 0 10px;
+     margin-bottom: 30px;
    }
     width: 100%;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   &__image {

@@ -45,13 +45,12 @@
  $email_heading = get_field('email_heading');
  $email_button_text = get_field('email_button_text');
  $email_to = get_field('email_to');
+ $working_time_text = get_field('working_time_text');
 
  $authors_rights = get_field('authors_rights');
 
 get_header();
 ?>
-
-
 
 		<nav id="site-navigation" class="nav-nav">
       <div class="toolbar">
@@ -313,9 +312,10 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
+      <p class="contact__hours"><?php echo $working_time_text; ?></p>
 			<hr class="contact__rights">
 			<?php if($authors_rights): ?>
-				<p class="contact__rights--statement"><?php echo $authors_rights; ?></p>
+				<p><?php echo $authors_rights; ?></p>
 			<?php endif; ?>
 		</div>
 	</div>

@@ -52,6 +52,7 @@ get_header();
 ?>
 		<nav id="site-navigation" class="primary-nav">
 			<div class="container">
+          <?php echo make_list_shortcode( ' [list_sites] ' ); ?>
 					<a class="toggle-nav" href="#">
 						<div class="toggle-nav__line"></div>
 					</a>

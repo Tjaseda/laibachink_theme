@@ -316,8 +316,7 @@ function make_list_shortcode() {
             $subsite_id = $subsite->blog_id;
             $subsite_name = get_blog_details( $subsite_id )->blogname;
             $subsite_link = get_blog_details( $subsite_id )->siteurl;
-						$subsite_lang = get_blog_details( $subsite_id )->lang_id;
-            $html .= '<li class="site-' . $subsite_id . '"><a href="' . $subsite_link . '">' . $subsite_lang . '</a></li>';
+            $html .= '<li class="site-' . $subsite_id . '"><a href="' . $subsite_link . '">' . $subsite_name . '</a></li>';
         }
         $html .= '</ul>';
         return $html;

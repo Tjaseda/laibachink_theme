@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.lbi-wordl:before {
+  content: "\e906";
+  color: #8e793e;
+}
 .lbi-dcicon:before {
   content: "\e900";
   color: #a2a2a2;

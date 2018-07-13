@@ -1,0 +1,13 @@
+.toolbar {
+  background-color: black;
+  width: 100%; /* Full width */
+  z-index: 9;
+
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 5px 25px;
+    }
+  }
+}

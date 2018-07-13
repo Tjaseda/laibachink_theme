@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Laibachink';
-  src:  url('fonts/Laibachink.eot?4n3fib');
-  src:  url('fonts/Laibachink.eot?4n3fib#iefix') format('embedded-opentype'),
-    url('fonts/Laibachink.ttf?4n3fib') format('truetype'),
-    url('fonts/Laibachink.woff?4n3fib') format('woff'),
-    url('fonts/Laibachink.svg?4n3fib#Laibachink') format('svg');
+  src:  url('fonts/Laibachink.eot?s5glxd');
+  src:  url('fonts/Laibachink.eot?s5glxd#iefix') format('embedded-opentype'),
+    url('fonts/Laibachink.ttf?s5glxd') format('truetype'),
+    url('fonts/Laibachink.woff?s5glxd') format('woff'),
+    url('fonts/Laibachink.svg?s5glxd#Laibachink') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,9 +24,82 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.lbi-wordl:before {
-  content: "\e906";
-  color: #8e793e;
+.lbi-de .path1:before {
+  content: "\e907";
+  color: rgb(255, 206, 0);
+}
+.lbi-de .path2:before {
+  content: "\e908";
+  margin-left: -1.3330078125em;
+  color: rgb(0, 0, 0);
+}
+.lbi-de .path3:before {
+  content: "\e909";
+  margin-left: -1.3330078125em;
+  color: rgb(221, 0, 0);
+}
+.lbi-gb .path1:before {
+  content: "\e90a";
+  color: rgb(0, 0, 102);
+}
+.lbi-gb .path2:before {
+  content: "\e90b";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
+}
+.lbi-gb .path3:before {
+  content: "\e90c";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
+}
+.lbi-gb .path4:before {
+  content: "\e90d";
+  margin-left: -1.3330078125em;
+  color: rgb(204, 0, 0);
+}
+.lbi-si .path1:before {
+  content: "\e90e";
+  color: rgb(255, 255, 255);
+}
+.lbi-si .path2:before {
+  content: "\e90f";
+  margin-left: -1.3330078125em;
+  color: rgb(222, 41, 24);
+}
+.lbi-si .path3:before {
+  content: "\e910";
+  margin-left: -1.3330078125em;
+  color: rgb(8, 57, 156);
+}
+.lbi-si .path4:before {
+  content: "\e911";
+  margin-left: -1.3330078125em;
+  color: rgb(222, 41, 24);
+}
+.lbi-si .path5:before {
+  content: "\e912";
+  margin-left: -1.3330078125em;
+  color: rgb(8, 57, 156);
+}
+.lbi-si .path6:before {
+  content: "\e913";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 204, 0);
+}
+.lbi-si .path7:before {
+  content: "\e914";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
+}
+.lbi-si .path8:before {
+  content: "\e915";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 204, 0);
+}
+.lbi-si .path9:before {
+  content: "\e916";
+  margin-left: -1.3330078125em;
+  color: rgb(8, 57, 156);
 }
 .lbi-dcicon:before {
   content: "\e900";

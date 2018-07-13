@@ -296,7 +296,9 @@ add_action('init', 'df_disable_comments_admin_bar');
 
 function my_header_elements() { ?>
 <ul class="social">
-	<li><a href="#"><span class="lbi-wordl"></span></a></li>
+	<li><a href="#"><span class="lbi-de"></span></a></li>
+	<li><a href="#"><span class="lbi-gb"></span></a></li>
+	<li><a href="#"><span class="lbi-si"></span></a></li>
 	<li><a href="#"><span class="lbi-dcicon"></span></a></li>
 	<li><a href="#"><span class="lbi-email"></span></a></li>
  	<li><a href="#"><span class="lbi-facebook"></span></a></li>

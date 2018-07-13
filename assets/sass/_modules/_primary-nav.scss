@@ -1,17 +1,22 @@
-.primary-nav {
-  background-color: rgba(0, 0, 0, 0.5);
+.nav-nav {
   position: fixed;
   top: 0;
   width: 100%; /* Full width */
-  z-index: 10;
+  z-index: 15;
+}
 
+.primary-nav {
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.6);
 
   &--is-expanded {
+    height: auto;
     background-color: rgba(0, 0, 0, 0.9) !important;
   }
 }
 
 .menu-menu-1-container {
+  display: inline-block;
   width: 90%;
   margin: 0 auto;
   ul {
@@ -42,6 +47,7 @@
       }
     }
   }
+
   @include breakpoint(mediumLarge) {
     display: none;
   }

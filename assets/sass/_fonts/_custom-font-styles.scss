@@ -1,9 +1,21 @@
+.lbi-smaller {
+  font-size: 10px;
+}
+
+.lbi-smaller-medium {
+  font-size: 14px;
+}
+
 .lbi-small {
   font-size: 16px;
 }
 
 .lbi-medium {
   font-size: 22px;
+}
+
+.lbi-medium-big {
+  font-size: 25px;
 }
 
 .lbi-bigger {
@@ -13,4 +25,10 @@
 
 .lbi-bigest {
   font-size: 70px;
+}
+
+.lib-align-middle {
+  vertical-align: middle;
+  font-weight: 500;
+  color: $light-gray;
 }

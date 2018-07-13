@@ -50,24 +50,31 @@
 
 get_header();
 ?>
-		<nav id="site-navigation" class="primary-nav">
-			<div class="container">
-					<a class="toggle-nav" href="#">
-						<div class="toggle-nav__line"></div>
-					</a>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
+
+
+
+		<nav id="site-navigation" class="nav-nav">
+      <div class="toolbar">
         <?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'toolbar',
-				) );
-				?>
-			</div>
+        wp_nav_menu( array(
+          'theme_location' => 'menu-2',
+          'menu_id'        => 'toolbar',
+        ) );
+        ?>
+      </div>
+      <div class="primary-nav">
+  			<div class="container">
+  					<a class="toggle-nav" href="#">
+  						<div class="toggle-nav__line"></div>
+  					</a>
+          <?php
+  				wp_nav_menu( array(
+  					'theme_location' => 'menu-1',
+  					'menu_id'        => 'primary-menu',
+  				) );
+  				?>
+  			</div>
+      </div>
 		</nav><!-- #site-navigation -->
 
 		</header><!-- #masthead -->

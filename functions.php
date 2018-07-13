@@ -308,20 +308,4 @@ function my_header_elements() { ?>
 }
 add_action( 'hybrid_header', 'my_header_elements' );
 
-function make_list_shortcode() {
-    $subsites = get_sites();
-    if ( ! empty ( $subsites ) ) {
-        $html = '<ul class="subsites">';
-        foreach( $subsites as $subsite ) {
-            $subsite_id = $subsite->blog_id;
-            $subsite_name = get_blog_details( $subsite_id )->blogname;
-            $subsite_link = get_blog_details( $subsite_id )->siteurl;
-            $html .= '<li class="site-' . $subsite_id . '"><a href="' . $subsite_link . '">' . $subsite_name . '</a></li>';
-        }
-        $html .= '</ul>';
-        return $html;
-    }
-}
-add_shortcode('list_sites', 'make_list_shortcode');
-
 ?>

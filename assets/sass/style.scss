@@ -20,6 +20,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "_partials/base";
 @import "_partials/grid";
 
+@import "_fonts/custom-fonts";
+@import "_fonts/custom-font-styles";
+
 @import "_modules/primary-nav";
 @import "_modules/large-hero";
 @import "_modules/wrapper";

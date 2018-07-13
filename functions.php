@@ -292,3 +292,20 @@ function df_disable_comments_admin_bar() {
 	}
 }
 add_action('init', 'df_disable_comments_admin_bar');
+
+
+function my_header_elements() { ?>
+<ul class="social">
+	<li><a href="#"><span class="lbi-dcicon"></span></a></li>
+	<li><a href="#"><span class="lbi-email"></span></a></li>
+ 	<li><a href="#"><span class="lbi-facebook"></span></a></li>
+ 	<li><a href="#"><span class="lbi-instagram"></span></a></li>
+	<li><a href="#"><span class="lbi-logo"></span></a></li>
+ 	<li><a href="#"><span class="lbi-phone"></span></a></li>
+
+</ul>
+ <?php
+}
+add_action( 'hybrid_header', 'my_header_elements' );
+
+?>

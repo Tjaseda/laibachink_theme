@@ -73,7 +73,7 @@ get_header();
 	  <div class="large-hero__text-content">
 	    <div class="wrapper">
 	      <div class="large-hero__logo">
-	        <img class="logo" src="<?php bloginfo('template_directory'); ?>/assets/images/icons/logo.svg" alt?"logo">
+	        <i class="lbi-logo lbi-bigest"></i>
 	      </div>
 	      <?php
 	      the_custom_logo();
@@ -125,13 +125,13 @@ get_header();
 	      <p class="team-profile__position"><?php the_field('position'); ?></p>
 
 	      <?php if (get_field('facebook_link')): ?>
-	        <a class="team-profile__social" href="<?php echo get_field('facebook_link'); ?>" target="_blank" title="<?php the_title(); ?> Facebook"><img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/facebook.svg" width="15px;" height="15px;" /></a></button>
+	        <a class="team-profile__social" href="<?php echo get_field('facebook_link'); ?>" target="_blank" title="<?php the_title(); ?> Facebook"><i class="lbi-facebook lbi-small"></i></a>
 	      <?php endif; ?>
 	      <?php if (get_field('dc_link')): ?>
-	        <a class="team-profile__social" href="<?php echo get_field('dc_link'); ?>" target="_blank" title="<?php the_title(); ?> DC"><img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/dcicon.svg" width="15px;" height="15px;" /></a>
+	        <a class="team-profile__social" href="<?php echo get_field('dc_link'); ?>" target="_blank" title="<?php the_title(); ?> DC"><i class="lbi-dcicon lbi-small"></i></a>
 	      <?php endif; ?>
 	      <?php if (get_field('instagram_link')): ?>
-	        <a class="team-profile__social" href="<?php echo get_field('instagram_link'); ?>" target="_blank" title="<?php the_title(); ?> Instagram"><img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/instagram.svg" width="15px;" height="15px;" /></a>
+	        <a class="team-profile__social" href="<?php echo get_field('instagram_link'); ?>" target="_blank" title="<?php the_title(); ?> Instagram"><i class="lbi-instagram lbi-small"></i></a>
 	      <?php endif; ?>
 
 	    </div>
@@ -275,7 +275,7 @@ get_header();
 				<h3 class="page-section__subtitle"><?php echo $telephone_heading; ?></h3>
 				<?php if($telephone_number): ?>
 					<div class="contact__item">
-						<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/phone.svg" width="22px;" height="22px;" /><br />
+						<i class="lbi-phone lbi-medium"></i><br />
 						<div class="contact__item--text"><?php echo $telephone_number; ?></div>
 					</div>
 				<?php endif; ?>
@@ -284,10 +284,10 @@ get_header();
 				<h3 class="page-section__subtitle"><?php echo $social_media_heading; ?></h3>
 				<div class="contact__item">
 					<?php if($facebook_url): ?>
-						<a href="<?php echo $facebook_url; ?>" target="_blank"><img class="contact__icon" src="<?php bloginfo('template_directory'); ?>/assets/images/icons/facebook.svg" width="25px;" height="25px;" /></a>
+						<a href="<?php echo $facebook_url; ?>" target="_blank"><i class="lbi-facebook lbi-bigger"></i></a>
 					<?php endif; ?>
 					<?php if($instagram_url): ?>
-						<a href="<?php echo $instagram_url; ?>" target="_blank"><img class="contact__icon" src="<?php bloginfo('template_directory'); ?>/assets/images/icons/instagram.svg" width="25px;" height="25px;" /></a>
+						<a href="<?php echo $instagram_url; ?>" target="_blank"><i class="lbi-instagram lbi-bigger"></i></a>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -295,7 +295,7 @@ get_header();
 				<h3 class="page-section__subtitle"><?php echo $email_heading; ?></h3>
 				<div class="contact__item">
 					<?php if($email_to): ?>
-						<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/email.svg" width="20px;" height="20px;" /><br />
+						<i class="lbi-email lbi-small"></i><br />
 						<a class="contact__item--text" href="mailto:<?php echo $email_to; ?>" target="blank"><?php echo $email_to; ?></a>
 					<?php endif; ?>
 				</div>

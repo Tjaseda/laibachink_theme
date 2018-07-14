@@ -179,7 +179,7 @@ get_header();
 	      $class_names = join(' ', $slugs);
 
 	      ?>
-	      <div class="mix <?php if ($class_names) { echo ' ' . $class_names;} ?>" data-ref="mixitup-target" data-img='<?php the_post_thumbnail("portfolio_view", array( "class" => "portfolio__image-view", "alt" => $class_names." laibachink tattoo")) ?>'>
+	      <div class="mix <?php if ($class_names) { echo ' ' . $class_names;} ?>" data-ref="mixitup-target" data-img='<?php the_post_thumbnail("portfolio_view", array( "class" => "portfolio__image-view", "alt" => $class_names. "laibachink tattoo", "title" => $class_names. "laibachink tattoo")) ?>'>
 	        <?php the_post_thumbnail( 'portfolio_grid', array( 'class' => 'portfolio__image', 'alt' => $class_names.' laibachink tattoo'))?>
 	        <div class="portfolio__overlay"></div>
 	        <div class="portfolio__meta"><?php echo ' ' . $class_names; ?></div>

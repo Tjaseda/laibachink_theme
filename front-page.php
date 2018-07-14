@@ -254,19 +254,19 @@ get_header();
 
 				<div class="product__partner">
 					<?php if($logo_1): ?>
-						<a href="<?php echo $logo_1_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_1; ?>" alt="Carantania tattoo logo" /></a>
+						<a href="<?php echo $logo_1_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_1; ?>" alt="Carantania tattoo logo" title="Carantania tattoo logo" /></a>
 					<?php endif; ?>
 				</div>
 
 				<div class="product__partner">
 					<?php if($logo_2): ?>
-						<a href="<?php echo $logo_2_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_2; ?>" alt="Čebula media logo" /></a>
+						<a href="<?php echo $logo_2_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_2; ?>" alt="Čebula media logo" title="Čebula media logo"/></a>
 					<?php endif; ?>
 				</div>
 
 				<div class="product__partner">
 					<?php if($logo_3): ?>
-						<a href="<?php echo $logo_3_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_3; ?>" alt="DC Ink Booster logo" /></a>
+						<a href="<?php echo $logo_3_link; ?>" target="_blank"><img class="product__partner--item" src="<?php echo $logo_3; ?>" alt="DC Ink Booster logo" title="DC Ink Booster logo" /></a>
 					<?php endif; ?>
 				</div>
 

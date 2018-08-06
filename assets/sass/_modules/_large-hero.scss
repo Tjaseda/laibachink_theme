@@ -17,7 +17,6 @@
   &__logo {
     display: block;
     margin: 0 auto;
-    max-width: 50px;
   }
 
   &__text-content {
@@ -36,7 +35,6 @@
     font-weight: 400;
     letter-spacing: 2;
     color: $white-gray;
-    text-transform: uppercase;
     margin-top: $offset5;
     margin-bottom: 0;
     line-height: normal;

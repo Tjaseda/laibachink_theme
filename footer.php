@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="footer">
 		<div class="wrapper">
-			<p class="footer__copyright"> Copyright &#169; Laibachink Tattoo Studio | 2018 </p>
+			<p class="footer__copyright"> Copyright &#169; Laibachink Tattoo Studio | <?php echo date('Y'); ?> </p>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -15,15 +15,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Average+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <style>
-    html, body {
+    html {
       height: 100%;
+      overflow: hidden;
     }
 
     body {
+      height: 100%;
+      overflow-y: auto;
       background-color: #0a0a0a;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      min-height: 100%;
     }
 
     .maintenance {
@@ -51,7 +54,7 @@
       left: 50%;
       transform: translate(-50%, -50%) rotate(-15deg);
       pointer-events: none;
-      color: rgba(255, 255, 255, 0.025);
+      color: rgba(255, 255, 255, 0.05);
     }
 
     .maintenance__logo-bg::before {
@@ -132,6 +135,7 @@
     @media (max-width: 740px) {
       .maintenance__logo-bg {
         font-size: 340px;
+        color: rgba(255, 255, 255, 0.07);
       }
       .maintenance__title {
         font-size: 2rem;

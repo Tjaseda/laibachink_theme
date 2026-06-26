@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laibachink Tattoo Studio</title>
+  <link rel="shortcut icon" href="../favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Average+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .maintenance {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Large logo icon — centered behind the title, tilted, very subtle */
+    .maintenance__logo-bg {
+      font-family: 'Laibachink' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 550px;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      pointer-events: none;
+      color: rgba(255, 255, 255, 0.025);
+    }
+
+    .maintenance__logo-bg::before {
+      content: "\e904";
+    }
+
+    .maintenance__content {
+      position: relative;
+      z-index: 1;
+      margin-top: 130px;
+    }
+
+    .maintenance__title {
+      font-family: 'Syncopate', sans-serif;
+      font-weight: 400;
+      color: #D1D1D1;
+      letter-spacing: 6px;
+      font-size: 3.4rem;
+      line-height: normal;
+      margin: 0 0 1.5rem;
+    }
+
+    .maintenance__tagline {
+      font-family: 'Syncopate', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #8E793E;
+      letter-spacing: 3px;
+      margin: 0;
+    }
+
+    /* Footer with contact + copyright */
+    .maintenance__footer {
+      text-align: center;
+      padding: 2rem 1.5rem 1.5rem;
+      font-family: 'Average Sans', sans-serif;
+    }
+
+    .maintenance__contact {
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .maintenance__contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #A2A2A2;
+    }
+
+    .maintenance__contact-item a {
+      color: #A2A2A2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .maintenance__contact-item a:hover {
+      color: #D1D1D1;
+    }
+
+    .maintenance__social {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .maintenance__social a {
+      color: #A2A2A2;
+      transition: color 0.3s ease;
+    }
+
+    .maintenance__social a:hover {
+      color: #D1D1D1;
+    }
+
+    @media (max-width: 740px) {
+      .maintenance__logo-bg {
+        font-size: 340px;
+      }
+      .maintenance__title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+      }
+      .maintenance__tagline {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
+      .maintenance__contact {
+        gap: 1rem;
+      }
+      .maintenance__contact-item a {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="maintenance">
+    <span class="maintenance__logo-bg"></span>
+
+    <div class="maintenance__content">
+      <h1 class="maintenance__title">Laibachink</h1>
+      <p class="maintenance__tagline">New website coming soon</p>
+    </div>
+  </main>
+
+  <footer class="maintenance__footer">
+    <div class="maintenance__contact">
+
+      <div class="maintenance__contact-item">
+        <i class="lbi-phone lbi-small"></i>
+        <a href="tel:+38630995995">00386 30 995 995</a>
+      </div>
+
+      <div class="maintenance__contact-item">
+        <i class="lbi-email lbi-small"></i>
+        <a href="mailto:laibach.ink@gmail.com">laibach.ink@gmail.com</a>
+      </div>
+
+      <div class="maintenance__contact-item">
+        <div class="maintenance__social">
+          <a href="https://www.facebook.com/laibachink/" target="_blank"><i class="lbi-facebook lbi-medium"></i></a>
+          <a href="https://www.instagram.com/laibachink_tattoo/?hl=en" target="_blank"><i class="lbi-instagram lbi-medium"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -172,7 +172,7 @@
 <body>
 
   <main class="maintenance">
-    <span class="maintenance__logo-bg"></span>
+    <span class="maintenance__logo-bg" aria-hidden="true"></span>
 
     <div class="maintenance__content">
         <h1 class="maintenance__title">
@@ -187,19 +187,33 @@
     <div class="maintenance__contact">
 
       <div class="maintenance__contact-item">
-        <i class="lbi-phone lbi-small"></i>
+        <i class="lbi-phone lbi-small" aria-hidden="true"></i>
         <a href="tel:+38630995995">00386 30 995 995</a>
       </div>
 
       <div class="maintenance__contact-item">
-        <i class="lbi-email lbi-small"></i>
+        <i class="lbi-email lbi-small" aria-hidden="true"></i>
         <a href="mailto:laibach.ink@gmail.com">laibach.ink@gmail.com</a>
       </div>
 
       <div class="maintenance__contact-item">
         <div class="maintenance__social">
-          <a href="https://www.facebook.com/laibachink/" target="_blank"><i class="lbi-facebook lbi-medium"></i></a>
-          <a href="https://www.instagram.com/laibachink_tattoo/?hl=en" target="_blank"><i class="lbi-instagram lbi-medium"></i></a>
+          <a
+            href="https://www.facebook.com/laibachink/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="lbi-facebook lbi-medium" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/laibachink_tattoo/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="lbi-instagram lbi-medium" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 

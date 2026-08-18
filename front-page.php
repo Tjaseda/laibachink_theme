@@ -15,144 +15,158 @@
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Average+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <style>
-    html {
-      height: 100%;
-      overflow: hidden;
-    }
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
 
-    body {
-      height: 100%;
-      overflow-y: auto;
-      background-color: #0a0a0a;
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-    }
+      body {
+        height: 100%;
+        overflow-y: auto;
+        background-color: #0a0a0a;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
 
-    .maintenance {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
+      .maintenance {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
 
-    /* Large logo icon — centered behind the title, tilted, very subtle */
-    .maintenance__logo-bg {
-      font-family: 'Laibachink' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 550px;
-      line-height: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-15deg);
-      pointer-events: none;
-      color: rgba(255, 255, 255, 0.05);
-    }
-
-    .maintenance__logo-bg::before {
-      content: "\e904";
-    }
-
-    .maintenance__content {
-      position: relative;
-      z-index: 1;
-      margin-top: 130px;
-    }
-
-    .maintenance__title {
-      font-family: 'Syncopate', sans-serif;
-      font-weight: 400;
-      color: #D1D1D1;
-      letter-spacing: 6px;
-      font-size: 3.4rem;
-      line-height: normal;
-      margin: 0 0 1.5rem;
-    }
-
-    .maintenance__tagline {
-      font-family: 'Syncopate', sans-serif;
-      font-weight: 400;
-      font-size: 1rem;
-      color: #8E793E;
-      letter-spacing: 3px;
-      margin: 0;
-    }
-
-    .maintenance__footer {
-      text-align: center;
-      padding: 2rem 1.5rem 1.5rem;
-      font-family: 'Average Sans', sans-serif;
-    }
-
-    .maintenance__contact {
-      display: flex;
-      gap: 3rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    .maintenance__contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #A2A2A2;
-    }
-
-    .maintenance__contact-item a {
-      color: #A2A2A2;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-    }
-
-    .maintenance__contact-item a:hover {
-      color: #D1D1D1;
-    }
-
-    .maintenance__social {
-      display: flex;
-      gap: 0.25rem;
-    }
-
-    .maintenance__social a {
-      color: #A2A2A2;
-      transition: color 0.3s ease;
-    }
-
-    .maintenance__social a:hover {
-      color: #D1D1D1;
-    }
-
-    @media (max-width: 740px) {
+      /* Large logo icon — centered behind the title, tilted, very subtle */
       .maintenance__logo-bg {
-        font-size: 340px;
-        color: rgba(255, 255, 255, 0.07);
+        font-family: 'Laibachink' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 550px;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        pointer-events: none;
+        color: rgba(255, 255, 255, 0.05);
       }
+
+      .maintenance__logo-bg::before {
+        content: "\e904";
+      }
+
+      .maintenance__content {
+        position: relative;
+        z-index: 1;
+        margin-top: 130px;
+      }
+
       .maintenance__title {
-        font-size: 2rem;
-        letter-spacing: 4px;
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 400;
+        color: #D1D1D1;
+        letter-spacing: 6px;
+        font-size: 3.4rem;
+        line-height: normal;
+        margin: 0 0 3rem;
       }
+
+      .maintenance__title span {
+        display: block;
+        margin-top: 0.75rem;
+        font-family: 'Syncopate', sans-serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+      }
+
       .maintenance__tagline {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: #8E793E;
+        letter-spacing: 3px;
+        margin: 0;
       }
+
+      /* Footer with contact + copyright */
+      .maintenance__footer {
+        text-align: center;
+        padding: 2rem 1.5rem 1.5rem;
+        font-family: 'Average Sans', sans-serif;
+      }
+
       .maintenance__contact {
-        gap: 1rem;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
       }
+
+      .maintenance__contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #A2A2A2;
+      }
+
       .maintenance__contact-item a {
-        font-size: 0.75rem;
+        color: #A2A2A2;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
       }
-    }
-  </style>
+
+      .maintenance__contact-item a:hover {
+        color: #D1D1D1;
+      }
+
+      .maintenance__social {
+        display: flex;
+        gap: 0.25rem;
+      }
+
+      .maintenance__social a {
+        color: #A2A2A2;
+        transition: color 0.3s ease;
+      }
+
+      .maintenance__social a:hover {
+        color: #D1D1D1;
+      }
+
+      @media (max-width: 740px) {
+        .maintenance__logo-bg {
+          font-size: 340px;
+          color: rgba(255, 255, 255, 0.07);
+        }
+        .maintenance__title {
+          font-size: 2rem;
+          letter-spacing: 4px;
+          margin: 0 0 2rem;
+        }
+        .maintenance__title span {
+          font-size: 0.625rem;
+        }
+        .maintenance__tagline {
+          font-size: 0.8rem;
+          letter-spacing: 2px;
+        }
+        .maintenance__contact {
+          gap: 1rem;
+        }
+        .maintenance__contact-item a {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -160,8 +174,11 @@
     <span class="maintenance__logo-bg"></span>
 
     <div class="maintenance__content">
-      <h1 class="maintenance__title">Laibachink</h1>
-      <p class="maintenance__tagline">New website coming soon</p>
+        <h1 class="maintenance__title">
+            Laibachink
+            <span>Tattoo Studio Ljubljana</span>
+        </h1>
+    <p class="maintenance__tagline">New website coming soon</p>
     </div>
   </main>
 
